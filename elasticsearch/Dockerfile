@@ -1,7 +1,6 @@
 ARG ELASTIC_VERSION
 
-# https://www.docker.elastic.co/
 FROM docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_VERSION}
 
-# Add your elasticsearch plugins setup here
-# Example: RUN elasticsearch-plugin install analysis-icu
+COPY ./alerting.zip /opendistro/alerting.zip
+RUN bin/elasticsearch-plugin install -b file:///opendistro/alerting.zip
