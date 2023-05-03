@@ -25,7 +25,10 @@ winlogbeat.event_logs:
   - name: System
 
   - name: Security
-    event_id: 4624, 4625, 4663, 4798, 400, 403, 600, 800, 4656, 4658, 4659, 4660, 4670
+    event_id: 4624, 4625, 4648
+  #logon event audit. 4624(logon) 4625(logonfail) 4648(A Logon Was Attempted Using Explicit Credentials.)
+  
+  #event_id: 4624, 4625, 4663, 4798, 400, 403, 600, 800, 4656, 4658, 4659, 4660, 4670
 
   #  processors:
   #    - script:
