@@ -1,0 +1,80 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                },
+                "savedSearchId": "PostgreSQL All Logs-ecs",
+                "title": "Log Level Count [Filebeat PostgreSQL] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"field\": \"log.level\", \"orderBy\": \"1\", \"size\": 12, \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"bucket\", \"type\": \"terms\"}], \"type\": \"table\", \"title\": \"Log Level Count [Filebeat PostgreSQL] ECS\", \"params\": {\"showPartialRows\": false, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"perPage\": 10, \"totalFunc\": \"sum\", \"showTotal\": false, \"showMeticsAtAllLevels\": false}}"
+            },
+            "id": "PostgreSQL Log Level Count-ecs",
+            "type": "visualization",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "user.name",
+                    "postgresql.log.database",
+                    "log.level",
+                    "message",
+                    "postgresql.log.query"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"type\": \"phrase\", \"query\": \"postgresql\"}, \"value\": \"postgresql\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"index\": \"filebeat-*\", \"key\": \"event.module\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"postgresql\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true, \"index\": \"filebeat-*\", \"highlightAll\": true}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "All Logs [Filebeat PostgreSQL] ECS",
+                "version": 1
+            },
+            "id": "PostgreSQL All Logs-ecs",
+            "type": "search",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                },
+                "savedSearchId": "PostgreSQL All Logs-ecs",
+                "title": "Logs by level over time [Filebeat PostgreSQL] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"min_doc_count\": 1, \"field\": \"@timestamp\", \"interval\": \"auto\", \"customInterval\": \"2h\", \"extended_bounds\": {}}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"date_histogram\"}, {\"enabled\": true, \"params\": {\"field\": \"log.level\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"group\", \"type\": \"terms\"}], \"type\": \"histogram\", \"title\": \"Logs by level over time [Filebeat PostgreSQL] ECS\", \"params\": {\"addLegend\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"addTimeMarker\": false, \"legendPosition\": \"right\", \"times\": [], \"categoryAxes\": [{\"style\": {}, \"id\": \"CategoryAxis-1\", \"labels\": {\"show\": true, \"truncate\": 100}, \"title\": {\"text\": \"@timestamp per month\"}, \"type\": \"category\", \"scale\": {\"type\": \"linear\"}, \"show\": true, \"position\": \"bottom\"}], \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"id\": \"ValueAxis-1\", \"labels\": {\"filter\": false, \"show\": true, \"rotate\": 0, \"truncate\": 100}, \"title\": {\"text\": \"Count\"}, \"type\": \"value\", \"name\": \"LeftAxis-1\", \"scale\": {\"mode\": \"normal\", \"type\": \"linear\"}, \"show\": true, \"position\": \"left\"}], \"type\": \"histogram\", \"seriesParams\": [{\"type\": \"histogram\", \"show\": \"true\", \"showCircles\": true, \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\"}]}}"
+            },
+            "id": "3dbd5370-87f3-11e7-ad9c-db80de0bf8d3-ecs",
+            "type": "visualization",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "Overview dashboard for the Filebeat PostgreSQL module",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"highlightAll\": true}"
+                },
+                "optionsJSON": "{\"darkTheme\": false}",
+                "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"PostgreSQL Log Level Count-ecs\", \"size_x\": 3, \"row\": 1, \"size_y\": 3, \"panelIndex\": 1, \"col\": 1}, {\"type\": \"search\", \"id\": \"PostgreSQL All Logs-ecs\", \"sort\": [\"@timestamp\", \"desc\"], \"panelIndex\": 2, \"row\": 4, \"size_y\": 6, \"columns\": [\"user.name\", \"postgresql.log.database\", \"log.level\", \"message\", \"postgresql.log.query\"], \"col\": 1, \"size_x\": 12}, {\"type\": \"visualization\", \"id\": \"3dbd5370-87f3-11e7-ad9c-db80de0bf8d3-ecs\", \"size_x\": 9, \"row\": 1, \"size_y\": 3, \"panelIndex\": 3, \"col\": 4}]",
+                "timeRestore": false,
+                "title": "[Filebeat PostgreSQL] Overview ECS",
+                "uiStateJSON": "{\"P-1\": {\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}}",
+                "version": 1
+            },
+            "id": "158be870-87f4-11e7-ad9c-db80de0bf8d3-ecs",
+            "type": "dashboard",
+            "version": 1
+        }
+    ],
+    "version": "6.0.0-beta1-SNAPSHOT"
+}

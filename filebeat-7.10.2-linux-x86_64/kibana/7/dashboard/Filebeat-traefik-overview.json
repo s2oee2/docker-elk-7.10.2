@@ -1,0 +1,136 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"index\": \"filebeat-*\"}"
+                },
+                "title": "Browsers breakdown [Filebeat Traefik] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"field\": \"user_agent.name\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"field\": \"user_agent.version\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"segment\", \"type\": \"terms\"}], \"type\": \"pie\", \"params\": {\"addLegend\": true, \"addTooltip\": true, \"legendPosition\": \"bottom\", \"shareYAxis\": true, \"isDonut\": true}, \"title\": \"Traefik Access Browsers ECS\", \"listeners\": {}}"
+            },
+            "id": "Traefik-Access-Browsers-ecs",
+            "type": "visualization",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"index\": \"filebeat-*\"}"
+                },
+                "title": "Operating systems breakdown [Filebeat Traefik] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"field\": \"user_agent.os.name\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"field\": \"user_agent.os.version\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"segment\", \"type\": \"terms\"}], \"type\": \"pie\", \"params\": {\"addLegend\": true, \"addTooltip\": true, \"legendPosition\": \"bottom\", \"shareYAxis\": true, \"isDonut\": true}, \"title\": \"Traefik Access OSes ECS\", \"listeners\": {}}"
+            },
+            "id": "Traefik-Access-OSes-ecs",
+            "type": "visualization",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                },
+                "savedSearchId": "Filebeat-Traefik-module-ecs",
+                "title": "Response codes over time [Filebeat Traefik] ECS",
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"200\": \"#7EB26D\", \"404\": \"#614D93\"}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"min_doc_count\": 1, \"field\": \"@timestamp\", \"interval\": \"auto\", \"customInterval\": \"2h\", \"extended_bounds\": {}}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"date_histogram\"}, {\"enabled\": true, \"params\": {\"field\": \"http.response.status_code\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"group\", \"type\": \"terms\"}], \"type\": \"histogram\", \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTimeMarker\": false, \"defaultYExtents\": false, \"setYExtents\": false, \"shareYAxis\": true, \"mode\": \"stacked\", \"addTooltip\": true, \"times\": [], \"scale\": \"linear\", \"yAxis\": {}}, \"title\": \"New Visualization ECS\", \"listeners\": {}}"
+            },
+            "id": "New-Visualization-ecs",
+            "type": "visualization",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"index\": \"filebeat-*\"}"
+                },
+                "title": "Response codes by top URLs [Filebeat Traefik] ECS",
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"200\": \"#629E51\", \"404\": \"#0A50A1\"}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"row\": false, \"field\": \"url.original\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"split\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"field\": \"http.response.status_code\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"segment\", \"type\": \"terms\"}], \"type\": \"pie\", \"params\": {\"addLegend\": true, \"addTooltip\": true, \"legendPosition\": \"right\", \"shareYAxis\": true, \"isDonut\": false}, \"title\": \"Traefik Access Response codes by top URLs ECS\", \"listeners\": {}}"
+            },
+            "id": "Traefik-Access-Response-codes-by-top-URLs-ecs",
+            "type": "visualization",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"pre_tags\": [\"@kibana-highlighted-field@\"], \"fragment_size\": 2147483647}, \"query\": {\"query\": \"event.dataset:traefik.access\", \"language\": \"kuery\"}, \"index\": \"filebeat-*\"}"
+                },
+                "title": "Sent Byte Size [Filebeat Traefik] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {\"field\": \"http.response.body.bytes\", \"customLabel\": \"Data sent\"}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"sum\"}, {\"enabled\": true, \"params\": {\"min_doc_count\": 1, \"field\": \"@timestamp\", \"interval\": \"auto\", \"customInterval\": \"2h\", \"extended_bounds\": {}}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"date_histogram\"}, {\"enabled\": true, \"params\": {}, \"id\": \"3\", \"schema\": \"radius\", \"type\": \"count\"}], \"type\": \"line\", \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"smoothLines\": true, \"addTimeMarker\": false, \"showCircles\": true, \"setYExtents\": false, \"shareYAxis\": true, \"times\": [], \"scale\": \"linear\", \"yAxis\": {}, \"defaultYExtents\": false, \"radiusRatio\": \"17\", \"interpolate\": \"linear\", \"addTooltip\": true, \"drawLinesBetweenPoints\": true}, \"title\": \"Sent sizes ECS\", \"listeners\": {}}"
+            },
+            "id": "Sent-sizes-ecs",
+            "type": "visualization",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                },
+                "savedSearchId": "Filebeat-Traefik-module-ecs",
+                "title": "Access Map [Filebeat Traefik] ECS",
+                "uiStateJSON": "{\"mapCenter\": [12.039320557540572, -0.17578125]}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"autoPrecision\": true, \"field\": \"source.geo.location\"}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"geohash_grid\"}], \"type\": \"tile_map\", \"params\": {\"legendPosition\": \"bottomright\", \"mapType\": \"Scaled Circle Markers\", \"isDesaturated\": true, \"heatNormalizeData\": true, \"heatRadius\": 25, \"mapCenter\": [15, 5], \"heatMinOpacity\": 0.1, \"heatMaxZoom\": 16, \"mapZoom\": 2, \"heatBlur\": 15, \"wms\": {\"enabled\": false, \"url\": \"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\", \"options\": {\"version\": \"1.3.0\", \"attribution\": \"Maps provided by USGS\", \"transparent\": true, \"layers\": \"0\", \"styles\": \"\", \"format\": \"image/png\"}}, \"addTooltip\": true}, \"title\": \"Traefik Access Map ECS\", \"listeners\": {}}"
+            },
+            "id": "Traefik-Access-Map-ecs",
+            "type": "visualization",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"post_tags\": [\"@/kibana-highlighted-field@\"], \"fields\": {\"*\": {}}, \"require_field_match\": false, \"pre_tags\": [\"@kibana-highlighted-field@\"], \"fragment_size\": 2147483647}, \"query\": {\"query\": \"event.module:traefik\", \"language\": \"kuery\"}, \"index\": \"filebeat-*\"}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Traefik logs [Filebeat Traefik] ECS",
+                "version": 1
+            },
+            "id": "Filebeat-Traefik-module-ecs",
+            "type": "search",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "Dashboard for the Filebeat Traefik module",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"darkTheme\": false}",
+                "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"Traefik-Access-Browsers-ecs\", \"size_x\": 4, \"row\": 10, \"size_y\": 4, \"panelIndex\": 3, \"col\": 1}, {\"type\": \"visualization\", \"id\": \"Traefik-Access-OSes-ecs\", \"size_x\": 4, \"row\": 10, \"size_y\": 4, \"panelIndex\": 4, \"col\": 5}, {\"type\": \"visualization\", \"id\": \"New-Visualization-ecs\", \"size_x\": 12, \"row\": 4, \"size_y\": 3, \"panelIndex\": 5, \"col\": 1}, {\"type\": \"visualization\", \"id\": \"Traefik-Access-Response-codes-by-top-URLs-ecs\", \"size_x\": 12, \"row\": 7, \"size_y\": 3, \"panelIndex\": 6, \"col\": 1}, {\"type\": \"visualization\", \"id\": \"Sent-sizes-ecs\", \"size_x\": 4, \"row\": 10, \"size_y\": 4, \"panelIndex\": 7, \"col\": 9}, {\"type\": \"visualization\", \"id\": \"Traefik-Access-Map-ecs\", \"size_x\": 12, \"row\": 1, \"size_y\": 3, \"panelIndex\": 8, \"col\": 1}]",
+                "timeRestore": false,
+                "title": "[Filebeat Traefik] Access logs ECS",
+                "uiStateJSON": "{\"P-8\": {\"mapCenter\": [50.51342652633956, -0.17578125]}, \"P-4\": {\"vis\": {\"legendOpen\": true}}}",
+                "version": 1
+            },
+            "id": "Filebeat-Traefik-Dashboard-ecs",
+            "type": "dashboard",
+            "version": 3
+        }
+    ],
+    "version": "6.0.0-beta1-SNAPSHOT"
+}

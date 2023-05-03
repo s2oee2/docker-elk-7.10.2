@@ -1,0 +1,146 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "This dashboard shows application logs collected by the ActiveMQ filebeat module.",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"x\": 0, \"i\": \"f0cad176-b0ef-4623-bd59-a9ce65db8b73\", \"h\": 15, \"y\": 0, \"w\": 24}, \"version\": \"7.4.0\", \"panelRefName\": \"panel_0\", \"embeddableConfig\": {}, \"panelIndex\": \"f0cad176-b0ef-4623-bd59-a9ce65db8b73\"}, {\"gridData\": {\"x\": 24, \"i\": \"7e3a3b6b-5fd9-491d-ad73-423bca90206f\", \"h\": 15, \"y\": 0, \"w\": 24}, \"version\": \"7.4.0\", \"panelRefName\": \"panel_1\", \"embeddableConfig\": {}, \"panelIndex\": \"7e3a3b6b-5fd9-491d-ad73-423bca90206f\"}, {\"gridData\": {\"x\": 0, \"i\": \"a3093cd3-7edf-4e25-949e-631f3e5e8dec\", \"h\": 22, \"y\": 15, \"w\": 48}, \"version\": \"7.4.0\", \"panelRefName\": \"panel_2\", \"embeddableConfig\": {}, \"panelIndex\": \"a3093cd3-7edf-4e25-949e-631f3e5e8dec\"}]",
+                "timeRestore": false,
+                "title": "[Filebeat ActiveMQ] Application Events",
+                "version": 1
+            },
+            "id": "26434790-1464-11ea-8fd8-030a13064883",
+            "migrationVersion": {
+                "dashboard": "7.3.0"
+            },
+            "references": [
+                {
+                    "id": "a0f15d50-1460-11ea-8fd8-030a13064883",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "026da780-1463-11ea-8fd8-030a13064883",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "d784ec10-1460-11ea-8fd8-030a13064883",
+                    "name": "panel_2",
+                    "type": "search"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2019-12-02T14:59:23.454Z",
+            "version": "WzI0NCw2XQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"query\": \"activemq.log\"}, \"value\": \"activemq.log\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\", \"key\": \"event.dataset\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"activemq.log\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "Application Event Results [Filebeat ActiveMQ]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"min_doc_count\": 1, \"timeRange\": {\"from\": \"now-2d\", \"to\": \"now\"}, \"interval\": \"auto\", \"extended_bounds\": {}, \"field\": \"@timestamp\", \"drop_partials\": false, \"useNormalizedEsInterval\": true}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"date_histogram\"}, {\"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"orderBy\": \"1\", \"otherBucket\": false, \"size\": 15, \"missingBucket\": false, \"field\": \"log.level\", \"otherBucketLabel\": \"Other\", \"order\": \"desc\"}, \"id\": \"4\", \"schema\": \"group\", \"type\": \"terms\"}], \"type\": \"histogram\", \"title\": \"Application Event Results [Filebeat ActiveMQ]\", \"params\": {\"addLegend\": true, \"categoryAxes\": [{\"style\": {}, \"id\": \"CategoryAxis-1\", \"labels\": {\"filter\": true, \"show\": true, \"truncate\": 100}, \"title\": {}, \"type\": \"category\", \"scale\": {\"type\": \"linear\"}, \"show\": true, \"position\": \"bottom\"}], \"addTimeMarker\": false, \"times\": [], \"type\": \"histogram\", \"labels\": {\"show\": false}, \"legendPosition\": \"right\", \"dimensions\": {\"splitColumn\": [{\"params\": {}, \"aggType\": \"filters\", \"accessor\": 1, \"format\": {}}], \"series\": [{\"params\": {}, \"aggType\": \"terms\", \"accessor\": 2, \"format\": {\"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\"}, \"id\": \"terms\"}}], \"y\": [{\"params\": {}, \"aggType\": \"count\", \"accessor\": 3, \"format\": {\"id\": \"number\"}}], \"x\": {\"params\": {\"interval\": \"PT1H\", \"date\": true, \"bounds\": {\"min\": \"2019-11-29T17:52:01.645Z\", \"max\": \"2019-12-01T17:52:01.645Z\"}, \"format\": \"YYYY-MM-DD HH:mm\"}, \"aggType\": \"date_histogram\", \"accessor\": 0, \"format\": {\"params\": {\"pattern\": \"YYYY-MM-DD HH:mm\"}, \"id\": \"date\"}}}, \"seriesParams\": [{\"type\": \"histogram\", \"show\": \"true\", \"showCircles\": true, \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"normal\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\"}], \"radiusRatio\": 50, \"grid\": {\"categoryLines\": false}, \"thresholdLine\": {\"style\": \"full\", \"show\": false, \"color\": \"#34130C\", \"value\": 10, \"width\": 1}, \"valueAxes\": [{\"style\": {}, \"id\": \"ValueAxis-1\", \"labels\": {\"filter\": false, \"show\": true, \"rotate\": 0, \"truncate\": 100}, \"title\": {\"text\": \"Count\"}, \"type\": \"value\", \"name\": \"LeftAxis-1\", \"scale\": {\"mode\": \"normal\", \"type\": \"linear\"}, \"show\": true, \"position\": \"left\"}], \"addTooltip\": true}}"
+            },
+            "id": "a0f15d50-1460-11ea-8fd8-030a13064883",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-12-02T14:56:05.639Z",
+            "version": "WzI0Miw2XQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"query\": \"ERROR\"}, \"value\": \"ERROR\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\", \"key\": \"log.level\"}, \"query\": {\"match\": {\"log.level\": {\"type\": \"phrase\", \"query\": \"ERROR\"}}}}, {\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"query\": \"activemq.log\"}, \"value\": \"activemq.log\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index\", \"key\": \"event.dataset\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"activemq.log\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "Top ERROR callers [Filebeat ActiveMQ]",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"orderBy\": \"1\", \"otherBucket\": false, \"size\": 10, \"missingBucket\": false, \"field\": \"activemq.caller\", \"otherBucketLabel\": \"Other\", \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"bucket\", \"type\": \"terms\"}], \"type\": \"table\", \"title\": \"Top ERROR callers [Filebeat ActiveMQ]\", \"params\": {\"showMetricsAtAllLevels\": false, \"percentageCol\": \"\", \"dimensions\": {\"buckets\": [{\"params\": {}, \"aggType\": \"terms\", \"accessor\": 0, \"format\": {\"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\"}, \"id\": \"terms\"}}], \"metrics\": [{\"params\": {}, \"aggType\": \"count\", \"accessor\": 1, \"format\": {\"id\": \"number\"}}]}, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showPartialRows\": false, \"perPage\": 10, \"showTotal\": false, \"totalFunc\": \"sum\"}}"
+            },
+            "id": "026da780-1463-11ea-8fd8-030a13064883",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-12-02T14:56:49.832Z",
+            "version": "WzI0Myw2XQ=="
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "log.level",
+                    "message",
+                    "activemq.thread"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"version\": true, \"query\": {\"query\": \"event.dataset :\\\"activemq.log\\\" \", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\", \"highlightAll\": true}"
+                },
+                "sort": [
+                    [
+                        "@timestamp",
+                        "desc"
+                    ]
+                ],
+                "title": "Application Events [Filebeat ActiveMQ]",
+                "version": 1
+            },
+            "id": "d784ec10-1460-11ea-8fd8-030a13064883",
+            "migrationVersion": {
+                "search": "7.4.0"
+            },
+            "references": [
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "search",
+            "updated_at": "2019-12-01T17:34:35.344Z",
+            "version": "WzIxOSw0XQ=="
+        }
+    ],
+    "version": "7.4.0"
+}

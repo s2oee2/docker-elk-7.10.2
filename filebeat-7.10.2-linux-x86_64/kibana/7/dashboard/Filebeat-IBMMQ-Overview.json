@@ -1,0 +1,299 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "Overview of IBM MQ",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"x\": 0, \"i\": \"1\", \"h\": 9, \"y\": 7, \"w\": 24}, \"version\": \"7.0.0\", \"panelRefName\": \"panel_0\", \"embeddableConfig\": {}, \"panelIndex\": \"1\"}, {\"title\": \"Top 5 Errors [Filebeat IBM MQ]\", \"panelRefName\": \"panel_1\", \"panelIndex\": \"6\", \"gridData\": {\"x\": 0, \"i\": \"6\", \"h\": 14, \"y\": 16, \"w\": 48}, \"version\": \"7.0.0\", \"embeddableConfig\": {}}, {\"gridData\": {\"x\": 0, \"i\": \"8\", \"h\": 7, \"y\": 0, \"w\": 13}, \"version\": \"7.0.0\", \"panelRefName\": \"panel_2\", \"embeddableConfig\": {}, \"panelIndex\": \"8\"}, {\"gridData\": {\"x\": 0, \"i\": \"9\", \"h\": 27, \"y\": 30, \"w\": 48}, \"version\": \"7.2.0\", \"panelRefName\": \"panel_3\", \"embeddableConfig\": {}, \"panelIndex\": \"9\"}, {\"gridData\": {\"x\": 24, \"i\": \"10\", \"h\": 9, \"y\": 7, \"w\": 24}, \"version\": \"7.2.0\", \"panelRefName\": \"panel_4\", \"embeddableConfig\": {}, \"panelIndex\": \"10\"}, {\"gridData\": {\"x\": 13, \"i\": \"11\", \"h\": 7, \"y\": 0, \"w\": 7}, \"version\": \"7.2.0\", \"panelRefName\": \"panel_5\", \"embeddableConfig\": {}, \"panelIndex\": \"11\"}, {\"gridData\": {\"x\": 20, \"i\": \"12\", \"h\": 7, \"y\": 0, \"w\": 7}, \"version\": \"7.2.0\", \"panelRefName\": \"panel_6\", \"embeddableConfig\": {}, \"panelIndex\": \"12\"}, {\"gridData\": {\"x\": 27, \"i\": \"13\", \"h\": 7, \"y\": 0, \"w\": 21}, \"version\": \"7.2.0\", \"panelRefName\": \"panel_7\", \"embeddableConfig\": {}, \"panelIndex\": \"13\"}]",
+                "refreshInterval": {
+                    "pause": true,
+                    "value": 0
+                },
+                "timeFrom": "now-2M",
+                "timeRestore": true,
+                "timeTo": "now",
+                "title": "[Filebeat IBM MQ] Overview of error log overview",
+                "version": 1
+            },
+            "id": "ba1d8830-7c7b-11e9-9645-e37efaf5baff",
+            "migrationVersion": {
+                "dashboard": "7.0.0"
+            },
+            "references": [
+                {
+                    "id": "4b2794c0-d901-11e8-aa1c-3fc8e6195a8e",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "b6308f30-7c7e-11e9-9645-e37efaf5baff",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "bf8e5de0-7c7f-11e9-9645-e37efaf5baff",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "82db7ba0-adec-11e9-8358-1517661d7c84",
+                    "name": "panel_3",
+                    "type": "search"
+                },
+                {
+                    "id": "df35c4b0-adf0-11e9-8358-1517661d7c84",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "3ff778d0-adf0-11e9-8358-1517661d7c84",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "57eae940-adf0-11e9-8358-1517661d7c84",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "845fca50-adef-11e9-8358-1517661d7c84",
+                    "name": "panel_7",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2019-07-24T09:05:03.616Z",
+            "version": "WzI4OSwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Errors over time by Queue Manager [Filebeat IBM MQ]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [], \"type\": \"metrics\", \"title\": \"Errors over time by Queue Manager [Filebeat IBM MQ]\", \"params\": {\"filter\": \"event.module:ibmmq\", \"time_field\": \"@timestamp\", \"default_index_pattern\": \"filebeat-*\", \"type\": \"timeseries\", \"series\": [{\"terms_size\": \"50\", \"formatter\": \"number\", \"stacked\": \"stacked\", \"chart_type\": \"line\", \"separate_axis\": 0, \"axis_position\": \"right\", \"terms_field\": \"ibmmq.errorlog.qmgr\", \"fill\": 0.5, \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"color\": \"#68BC00\", \"value_template\": \"{{value}} Errors\", \"point_size\": 1, \"metrics\": [{\"type\": \"count\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"split_mode\": \"terms\", \"line_width\": 1}], \"interval\": \"auto\", \"default_timefield\": \"@timestamp\", \"axis_position\": \"left\", \"axis_formatter\": \"number\", \"show_grid\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"index_pattern\": \"filebeat-*\", \"show_legend\": 1, \"axis_scale\": \"normal\"}}"
+            },
+            "id": "4b2794c0-d901-11e8-aa1c-3fc8e6195a8e",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-07-24T08:44:22.220Z",
+            "version": "WzI3OCwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"query\": \"ibmmq\"}, \"value\": \"ibmmq\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\", \"key\": \"event.module\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"ibmmq\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "Top 5 Errors [Filebeat IBM MQ]",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {\"customLabel\": \"Occurences\"}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"sortOrder\": \"desc\", \"size\": 1, \"field\": \"message\", \"customLabel\": \"Description\", \"aggregate\": \"concat\", \"sortField\": \"@timestamp\"}, \"id\": \"3\", \"schema\": \"metric\", \"type\": \"top_hits\"}, {\"enabled\": true, \"params\": {\"sortOrder\": \"desc\", \"size\": 1, \"field\": \"ibmmq.errorlog.explanation\", \"customLabel\": \"Explanation\", \"aggregate\": \"concat\", \"sortField\": \"@timestamp\"}, \"id\": \"5\", \"schema\": \"metric\", \"type\": \"top_hits\"}, {\"enabled\": true, \"params\": {\"sortOrder\": \"desc\", \"size\": 1, \"field\": \"ibmmq.errorlog.action\", \"customLabel\": \"Recommended Action\", \"aggregate\": \"concat\", \"sortField\": \"@timestamp\"}, \"id\": \"4\", \"schema\": \"metric\", \"type\": \"top_hits\"}, {\"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"orderBy\": \"1\", \"otherBucket\": false, \"size\": 5, \"missingBucket\": false, \"field\": \"ibmmq.errorlog.code\", \"customLabel\": \"Error Codes\", \"otherBucketLabel\": \"Other\", \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"bucket\", \"type\": \"terms\"}], \"type\": \"table\", \"title\": \"Top 5 Errors [Filebeat IBM MQ]\", \"params\": {\"showMetricsAtAllLevels\": false, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showPartialRows\": false, \"perPage\": 5, \"showTotal\": false, \"totalFunc\": \"sum\"}}"
+            },
+            "id": "b6308f30-7c7e-11e9-9645-e37efaf5baff",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-07-24T09:03:08.635Z",
+            "version": "WzI4OCwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Control [Filebeat IBM MQ]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [], \"type\": \"input_control_vis\", \"title\": \"Control [Filebeat IBM MQ]\", \"params\": {\"useTimeFilter\": false, \"updateFiltersOnChange\": false, \"controls\": [{\"type\": \"list\", \"id\": \"1558522305526\", \"fieldName\": \"ibmmq.errorlog.qmgr\", \"label\": \"Queue Manager\", \"indexPatternRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\", \"parent\": \"\", \"options\": {\"type\": \"terms\", \"size\": 5, \"order\": \"desc\", \"multiselect\": true, \"dynamicOptions\": true}}], \"pinFilters\": false}}"
+            },
+            "id": "bf8e5de0-7c7f-11e9-9645-e37efaf5baff",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-07-24T08:20:32.926Z",
+            "version": "WzI2NSwxXQ=="
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "@timestamp",
+                    "message",
+                    "ibmmq.errorlog.explanation",
+                    "ibmmq.errorlog.action"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"query\": \"ibmmq\"}, \"value\": \"ibmmq\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\", \"key\": \"event.module\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"ibmmq\"}}}}], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\", \"highlightAll\": true}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Errorlogs [Filebeat IBM MQ]",
+                "version": 1
+            },
+            "id": "82db7ba0-adec-11e9-8358-1517661d7c84",
+            "migrationVersion": {
+                "search": "7.0.0"
+            },
+            "references": [
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "filebeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "search",
+            "updated_at": "2019-07-24T08:36:18.357Z",
+            "version": "WzI3NCwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Errors per code, queue manager and host [Filebeat IBM MQ]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"orderBy\": \"1\", \"otherBucket\": true, \"size\": 5, \"missingBucket\": false, \"field\": \"ibmmq.errorlog.code\", \"customLabel\": \"Errorcodes\", \"otherBucketLabel\": \"Other\", \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"orderBy\": \"1\", \"otherBucket\": false, \"size\": 5, \"missingBucket\": false, \"field\": \"ibmmq.errorlog.qmgr\", \"customLabel\": \"Queue Manager\", \"otherBucketLabel\": \"Other\", \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"orderBy\": \"1\", \"otherBucket\": false, \"size\": 5, \"missingBucket\": false, \"field\": \"host.name\", \"customLabel\": \"Host\", \"otherBucketLabel\": \"Other\", \"order\": \"desc\"}, \"id\": \"4\", \"schema\": \"segment\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"Errors per code, queue manager and host [Filebeat IBM MQ]\", \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"dimensions\": {\"metric\": {\"params\": {}, \"aggType\": \"count\", \"accessor\": 0, \"format\": {\"id\": \"number\"}}}, \"isDonut\": true, \"addTooltip\": true, \"labels\": {\"show\": false, \"values\": true, \"last_level\": true, \"truncate\": 100}, \"type\": \"pie\"}}"
+            },
+            "id": "df35c4b0-adf0-11e9-8358-1517661d7c84",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "82db7ba0-adec-11e9-8358-1517661d7c84",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-07-24T08:56:55.163Z",
+            "version": "WzI4NiwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Different error codes [Filebeat IBM MQ]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {\"field\": \"ibmmq.errorlog.code\", \"customLabel\": \"Different error codes\"}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"cardinality\"}], \"type\": \"metric\", \"title\": \"Different error codes [Filebeat IBM MQ]\", \"params\": {\"addLegend\": false, \"addTooltip\": true, \"dimensions\": {\"metrics\": [{\"params\": {}, \"aggType\": \"count\", \"accessor\": 0, \"format\": {\"id\": \"number\"}}]}, \"metric\": {\"invertColors\": false, \"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"labelColor\": false, \"bgColor\": false, \"subText\": \"\", \"fontSize\": 60}, \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"metricColorMode\": \"None\"}, \"type\": \"metric\"}}"
+            },
+            "id": "3ff778d0-adf0-11e9-8358-1517661d7c84",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "82db7ba0-adec-11e9-8358-1517661d7c84",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-07-24T08:51:38.844Z",
+            "version": "WzI4MSwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Number of Queue Manager [Filebeat IBM MQ]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {\"field\": \"ibmmq.errorlog.qmgr\", \"customLabel\": \"Queue Manager\"}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"cardinality\"}], \"type\": \"metric\", \"title\": \"Number of Queue Manager [Filebeat IBM MQ]\", \"params\": {\"addLegend\": false, \"addTooltip\": true, \"dimensions\": {\"metrics\": [{\"params\": {}, \"aggType\": \"cardinality\", \"accessor\": 0, \"format\": {\"id\": \"number\"}}]}, \"metric\": {\"invertColors\": false, \"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"labelColor\": false, \"bgColor\": false, \"subText\": \"\", \"fontSize\": 60}, \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"metricColorMode\": \"None\"}, \"type\": \"metric\"}}"
+            },
+            "id": "57eae940-adf0-11e9-8358-1517661d7c84",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "82db7ba0-adec-11e9-8358-1517661d7c84",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-07-24T08:52:19.027Z",
+            "version": "WzI4MiwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Last error [Filebeat IBM MQ]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {\"field\": \"@timestamp\", \"customLabel\": \"Last error\"}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"max\"}], \"type\": \"metric\", \"title\": \"Last error [Filebeat IBM MQ]\", \"params\": {\"addLegend\": false, \"addTooltip\": true, \"dimensions\": {\"metrics\": [{\"params\": {}, \"aggType\": \"count\", \"accessor\": 0, \"format\": {\"id\": \"number\"}}]}, \"metric\": {\"invertColors\": false, \"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"labelColor\": false, \"bgColor\": false, \"subText\": \"\", \"fontSize\": 60}, \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"metricColorMode\": \"None\"}, \"type\": \"metric\"}}"
+            },
+            "id": "845fca50-adef-11e9-8358-1517661d7c84",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "82db7ba0-adec-11e9-8358-1517661d7c84",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-07-24T08:46:24.117Z",
+            "version": "WzI3OSwxXQ=="
+        }
+    ],
+    "version": "7.2.0"
+}

@@ -1,0 +1,185 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "columns": [
+                    "osquery.result.columns.path",
+                    "osquery.result.columns.type",
+                    "osquery.result.columns.flags"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_mounts\"}, \"value\": \"pack_it-compliance_mounts\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"index\": \"filebeat-*\", \"key\": \"osquery.result.name\"}, \"query\": {\"match\": {\"osquery.result.name\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_mounts\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true, \"index\": \"filebeat-*\", \"highlightAll\": true}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Mounts [Filebeat Osquery] ECS",
+                "version": 1
+            },
+            "id": "7a9482d0-eb00-11e7-8f04-51231daa5b05-ecs",
+            "type": "search",
+            "updated_at": "2018-01-08T17:35:32.102Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "savedSearchId": "7a9482d0-eb00-11e7-8f04-51231daa5b05-ecs",
+                "title": "Mounts by type [Filebeat Osquery] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"params\": {\"field\": \"osquery.result.columns.path\", \"orderBy\": \"1\", \"size\": 10, \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"field\": \"osquery.result.columns.type\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"segment\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"Mounts by type [Filebeat Osquery] ECS\", \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"isDonut\": true, \"addTooltip\": true, \"labels\": {\"show\": false, \"values\": true, \"last_level\": true, \"truncate\": 100}, \"type\": \"pie\"}}"
+            },
+            "id": "a9fd8bb0-eb01-11e7-8f04-51231daa5b05-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-08T17:35:32.102Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "osquery.result.columns.name",
+                    "osquery.result.columns.version",
+                    "osquery.result.columns.revision"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_deb_packages\"}, \"value\": \"pack_it-compliance_deb_packages\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"index\": \"filebeat-*\", \"key\": \"osquery.result.name\"}, \"query\": {\"match\": {\"osquery.result.name\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_deb_packages\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true, \"index\": \"filebeat-*\", \"highlightAll\": true}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "DEB packages installed [Filebeat Osquery] ECS",
+                "version": 1
+            },
+            "id": "3824b080-eb02-11e7-8f04-51231daa5b05-ecs",
+            "type": "search",
+            "updated_at": "2018-01-08T17:35:32.102Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "savedSearchId": "b5d6baa0-eb02-11e7-8f04-51231daa5b05-ecs",
+                "title": "OS versions [Filebeat Osquery] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {\"field\": \"osquery.result.host_identifier\"}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"cardinality\"}, {\"enabled\": true, \"params\": {\"field\": \"osquery.result.columns.platform_like\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"4\", \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"field\": \"osquery.result.columns.name\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"2\", \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"params\": {\"field\": \"osquery.result.columns.version\", \"orderBy\": \"1\", \"size\": 5, \"order\": \"desc\"}, \"id\": \"3\", \"schema\": \"segment\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"OS versions [Filebeat Osquery] ECS\", \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"isDonut\": true, \"addTooltip\": true, \"labels\": {\"show\": false, \"values\": true, \"last_level\": true, \"truncate\": 100}, \"type\": \"pie\"}}"
+            },
+            "id": "1da1ed30-eb03-11e7-8f04-51231daa5b05-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-08T17:35:32.102Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"type\": \"phrase\", \"query\": \"Live\"}, \"value\": \"Live\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"index\": \"filebeat-*\", \"key\": \"osquery.result.columns.status\"}, \"query\": {\"match\": {\"osquery.result.columns.status\": {\"type\": \"phrase\", \"query\": \"Live\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "savedSearchId": "f59e21e0-eb03-11e7-8f04-51231daa5b05-ecs",
+                "title": "Number of Kernel modules [Filebeat Osquery] ECS",
+                "uiStateJSON": "{\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"params\": {\"field\": \"osquery.result.columns.name\", \"customLabel\": \"Live Kernel modules\"}, \"id\": \"1\", \"schema\": \"metric\", \"type\": \"cardinality\"}], \"type\": \"gauge\", \"title\": \"Number of Kernel modules [Filebeat Osquery] ECS\", \"params\": {\"addLegend\": true, \"addTooltip\": true, \"isDisplayWarning\": false, \"gauge\": {\"type\": \"meter\", \"gaugeType\": \"Arc\", \"style\": {\"bgFill\": \"#eee\", \"bgMask\": false, \"bgWidth\": 0.9, \"maskBars\": 50, \"subText\": \"\", \"mask\": false, \"width\": 0.9, \"fontSize\": 60, \"bgColor\": false, \"labelColor\": true}, \"colorsRange\": [{\"from\": 0, \"to\": 100}], \"labels\": {\"show\": true, \"color\": \"black\"}, \"scale\": {\"show\": true, \"labels\": false, \"color\": \"#333\"}, \"invertColors\": false, \"verticalSplit\": false, \"backStyle\": \"Full\", \"percentageMode\": false, \"extendRange\": true, \"gaugeColorMode\": \"Labels\", \"orientation\": \"vertical\", \"gaugeStyle\": \"Full\", \"colorSchema\": \"Green to Red\"}, \"type\": \"gauge\"}}"
+            },
+            "id": "240f3630-eb05-11e7-8f04-51231daa5b05-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-08T17:35:32.102Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{}"
+                },
+                "title": "Navigation [Filebeat Osquery] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [], \"type\": \"markdown\", \"title\": \"Navigation [Filebeat Osquery] ECS\", \"params\": {\"fontSize\": 10, \"markdown\": \"[Compilance](#/dashboard/69f5ae20-eb02-11e7-8f04-51231daa5b05-ecs) | [OSSEC Rootkit](#/dashboard/c0a7ce90-f4aa-11e7-8647-534bb4c21040-ecs)\"}}"
+            },
+            "id": "2d6e0760-f4ab-11e7-8647-534bb4c21040-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-08T19:41:10.264Z",
+            "version": 3
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "osquery.result.name"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_os_version\"}, \"value\": \"pack_it-compliance_os_version\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"index\": \"filebeat-*\", \"key\": \"osquery.result.name\"}, \"query\": {\"match\": {\"osquery.result.name\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_os_version\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true, \"index\": \"filebeat-*\", \"highlightAll\": true}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "OS versions [Filebeat Osquery] ECS",
+                "version": 1
+            },
+            "id": "b5d6baa0-eb02-11e7-8f04-51231daa5b05-ecs",
+            "type": "search",
+            "updated_at": "2018-01-08T17:35:32.102Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "osquery.result.name",
+                    "osquery.result.columns.name",
+                    "osquery.result.columns.status"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"params\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_kernel_modules\"}, \"value\": \"pack_it-compliance_kernel_modules\", \"alias\": null, \"negate\": false, \"disabled\": false, \"type\": \"phrase\", \"index\": \"filebeat-*\", \"key\": \"osquery.result.name\"}, \"query\": {\"match\": {\"osquery.result.name\": {\"type\": \"phrase\", \"query\": \"pack_it-compliance_kernel_modules\"}}}}], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true, \"index\": \"filebeat-*\", \"highlightAll\": true}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Kernel modules [Filebeat Osquery] ECS",
+                "version": 1
+            },
+            "id": "f59e21e0-eb03-11e7-8f04-51231daa5b05-ecs",
+            "type": "search",
+            "updated_at": "2018-01-08T17:35:32.102Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "Dashboard for visualizing the data collected by the Osquery compliance pack.",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"highlightAll\": true}"
+                },
+                "optionsJSON": "{\"darkTheme\": false, \"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"type\": \"search\", \"gridData\": {\"x\": 6, \"i\": \"1\", \"h\": 4, \"y\": 6, \"w\": 6}, \"version\": \"6.2.4\", \"id\": \"7a9482d0-eb00-11e7-8f04-51231daa5b05-ecs\", \"panelIndex\": \"1\"}, {\"type\": \"visualization\", \"gridData\": {\"x\": 5, \"i\": \"2\", \"h\": 5, \"y\": 1, \"w\": 7}, \"version\": \"6.2.4\", \"id\": \"a9fd8bb0-eb01-11e7-8f04-51231daa5b05-ecs\", \"panelIndex\": \"2\"}, {\"type\": \"search\", \"gridData\": {\"x\": 0, \"i\": \"3\", \"h\": 4, \"y\": 6, \"w\": 6}, \"version\": \"6.2.4\", \"id\": \"3824b080-eb02-11e7-8f04-51231daa5b05-ecs\", \"panelIndex\": \"3\"}, {\"type\": \"visualization\", \"gridData\": {\"x\": 0, \"i\": \"4\", \"h\": 3, \"y\": 1, \"w\": 5}, \"version\": \"6.2.4\", \"id\": \"1da1ed30-eb03-11e7-8f04-51231daa5b05-ecs\", \"panelIndex\": \"4\"}, {\"type\": \"visualization\", \"id\": \"240f3630-eb05-11e7-8f04-51231daa5b05-ecs\", \"panelIndex\": \"5\", \"gridData\": {\"x\": 0, \"i\": \"5\", \"h\": 2, \"y\": 4, \"w\": 5}, \"version\": \"6.2.4\", \"embeddableConfig\": {\"vis\": {\"legendOpen\": false, \"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}}, {\"type\": \"visualization\", \"gridData\": {\"x\": 0, \"i\": \"6\", \"h\": 1, \"y\": 0, \"w\": 12}, \"version\": \"6.1.0-SNAPSHOT\", \"id\": \"2d6e0760-f4ab-11e7-8647-534bb4c21040-ecs\", \"panelIndex\": \"6\"}]",
+                "timeRestore": false,
+                "title": "[Filebeat Osquery] Compliance pack ECS",
+                "uiStateJSON": "{\"P-5\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}}",
+                "version": 1
+            },
+            "id": "69f5ae20-eb02-11e7-8f04-51231daa5b05-ecs",
+            "type": "dashboard",
+            "updated_at": "2018-01-08T19:42:15.406Z",
+            "version": 2
+        }
+    ],
+    "version": "6.1.0-SNAPSHOT"
+}
